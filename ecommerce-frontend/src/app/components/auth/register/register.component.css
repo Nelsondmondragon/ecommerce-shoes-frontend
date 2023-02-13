@@ -1,0 +1,48 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--gray);
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+    backdrop-filter: blur(100000px);
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    border-radius: 20px;
+    background: var(--gray);
+
+}
+
+input {
+    height: 35px;
+    padding-left: 5px;
+    margin-top: 10px;
+    border: none;
+
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background: var(--green);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    line-height: 100%;
+}
