@@ -1,0 +1,7 @@
+<div class="container">
+  <app-cimg [img]="product.images[0]"></app-cimg>
+  <p>{{ product.title }}</p>
+  <h4>{{ product.price | currency:'COP' }}</h4>
+  <!-- <p>{{product.taxes}}</p> -->
+  <button (click)="onAddToCart()" ></button>
+</div>

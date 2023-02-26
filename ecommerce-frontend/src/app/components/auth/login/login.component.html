@@ -1,0 +1,21 @@
+<div>
+  <form class="register" [formGroup]="formulario" (ngSubmit)="login()">
+    <h1>Ingresando</h1>
+    <!-- <br> -->
+    <h6 *ngIf="isMessageError()">{{messageError}}.</h6>
+    <input [class.is-invalid]="isNotValid('email') || isMessageError()" placeholder="email" type="email"
+      formControlName="email">
+    <h6 *ngIf="hasError('email','required')">Campo obligatorio.</h6>
+    <h6 *ngIf="hasError('email','email')">Email invalido.</h6>
+
+    <input [class.is-invalid]="isNotValid('password') || isMessageError()" placeholder="password" type="password"
+      formControlName="password">
+    <h6 *ngIf="hasError('password','required')">Campo obligatorio.</h6>
+
+    <div class="c-button">
+      <button type="submit">Iniciar</button>
+      <button type="" [routerLink]="['/register']">Crear cuenta</button>
+    </div>
+  </form>
+
+</div>

@@ -1,10 +1,29 @@
 <div>
-    <form class="register" action="" (ngSubmin)="registerUser()">
-        <h1>Register</h1>
-        <input placeholder="name" type="text">
-        <input placeholder="email" type="email">
-        <input placeholder="passwordd" type="password">
-        <input placeholder="repeat the password" type="password">
-        <button type="submit">Register</button>
-    </form>
+  <form class="register" [formGroup]="formulario" (ngSubmit)="register()">
+    <h1>Creando cuenta</h1>
+    <input [class.is-valid]="isValid('firstName')" placeholder="firstname" type="text" formControlName="firstName">
+    <h6 *ngIf="hasError('firstName','required')">Campo obligatorio.</h6>
+
+    <input [class.is-valid]="isValid('lastName')" placeholder="lastname" type="text" formControlName="lastName">
+    <h6 *ngIf="hasError('lastName','required')">Campo obligatorio.</h6>
+
+    <input [class.is-valid]="isValid('email')" placeholder="email" type="email" formControlName="email">
+    <h6 *ngIf="hasError('email','required')">Campo obligatorio.</h6>
+    <h6 *ngIf="hasError('email','email')">Email invalido.</h6>
+
+    <input [class.is-valid]="isValid('password')" placeholder="password" type="password" formControlName="password">
+    <h6 *ngIf="hasError('password','required')">Campo obligatorio.</h6>
+    <h6 *ngIf="hasError('password','minlength')">Minimo 8 caracteres.</h6>
+
+    <input [class.is-valid]="isValid('password2')" placeholder="repeat the password" type="password"
+      formControlName="password2">
+    <h6 *ngIf="hasError('password2','required')">Campo obligatorio.</h6>
+    <!-- <h6 *ngIf="hasError('password2','minlength')">Minimum length of 8 characters.</h6> -->
+    <h6 *ngIf="!passwordValid()">La contraseña no coincide.</h6>
+
+    <div class="c-button">
+      <button type="submit">Crear</button>
+      <button type="submit" [routerLink]="['/login']">Lon in</button>
+    </div>
+  </form>
 </div>

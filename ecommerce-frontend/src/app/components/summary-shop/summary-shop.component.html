@@ -1,0 +1,12 @@
+<div>
+  <div *ngFor="let product of myShoppingCart" class="summary-product">
+    <div>
+      <app-cimg [img]="product.images[0]"></app-cimg>
+    </div>
+    <div class="product">
+      <span>{{product.title}}</span>
+    </div>
+
+    <div>{{count}}</div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<main>
+
+  <swiper [slidesPerView]="3" [spaceBetween]="0">
+    <ng-template swiperSlide *ngFor="let img of productS">
+      <img [src]="img.images[0]" alt="">
+    </ng-template>
+  </swiper>
+
+  <div>
+    <app-products (fiveProducts)="onFiveProducts($event)"></app-products>
+  </div>
+</main>
+<footer>
+  <app-footer></app-footer>
+</footer>

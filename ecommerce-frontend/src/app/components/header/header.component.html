@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="logo"></div>
+  <div class="search">
+    <input type="text" placeholder="Buscar productos">
+    <div></div>
+  </div>
+  <div class="user">
+    <div *ngIf="!profileUser.firstName; else elseBlock" class="login">
+      <a href="" [routerLink]="['/register']">Crear cuenta</a>
+      <a href="" [routerLink]="['/login']">Ingresar</a>
+      <div [routerLink]="['/summary']">
+        <span>{{counter}}</span>
+      </div>
+
+    </div>
+
+    <ng-template #elseBlock>
+      <div class="data">
+        <a>Foto User</a>
+        <h6>{{profileUser.firstName}}</h6>
+      </div>
+    </ng-template>
+
+  </div>
+</div>

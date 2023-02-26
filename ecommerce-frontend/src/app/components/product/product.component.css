@@ -1,0 +1,33 @@
+p,
+h2 {
+  margin: 0;
+}
+
+button {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.container button{
+  background-image: url('../../../assets/images/add-to-cart.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2rem;
+  width: 3rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+
+.container button:hover{
+  transition: .5s;
+  background-color: #FFF9F9;
+}

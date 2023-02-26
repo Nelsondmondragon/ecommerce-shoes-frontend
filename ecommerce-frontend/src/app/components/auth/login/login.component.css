@@ -9,6 +9,7 @@ div {
 h1 {
   font-size: 2rem;
   line-height: 100%;
+  margin-bottom: .8rem;
 }
 
 .register {
@@ -32,6 +33,7 @@ input {
   border: none;
   border-radius: 10px;
 }
+
 input:focus {
   outline: none;
 }
@@ -49,27 +51,23 @@ button {
   line-height: 100%;
 }
 
-button:nth-child(1){
+button:nth-child(1) {
   margin-right: 10px;
 }
-button:nth-child(2){
+button:nth-child(2) {
   margin-left: 10px;
 }
+
 h6 {
-  color: red;
+  color: var(--red);
   margin-left: 5px;
 }
-
-.c-button{
+.c-button {
   display: flex;
   flex-direction: row;
   height: 30px;
 }
 
-.is-valid {
-  border: 2px solid green;
-}
 .is-invalid {
-  border: 2px solid red;
+  border: 2px solid var(--red);
 }
-
