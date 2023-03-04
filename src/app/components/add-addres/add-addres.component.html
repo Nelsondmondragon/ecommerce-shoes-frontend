@@ -1,0 +1,100 @@
+<body>
+
+  <header>
+    <div class="header__container">
+      <div class="logo"></div>
+      <div class="search">
+        <input type="text" placeholder="Buscar productos">
+        <div></div>
+      </div>
+      <div class="user">
+      </div>
+    </div>
+  </header>
+
+  <main class="main__contanier">
+    <div class="container__address">
+      <h2>Agregar Domicilio</h2>
+      <form class="register" [formGroup]="formulario" (ngSubmit)="addAddres()">
+
+
+        <h5>Nombre y apellido</h5>
+        <input type="text" pInputText>
+
+        <div class="address-department-municipalites">
+          <div>
+            <h5>Departamento</h5>
+            <p-dropdown [options]="department" [editable]="true"></p-dropdown>
+
+          </div>
+
+          <div>
+            <h5>Municipos</h5>
+            <p-dropdown [options]="municipalities" [editable]="true"></p-dropdown>
+
+          </div>
+        </div>
+
+
+        <h5>Barrio</h5>
+        <input type="text" pInputText>
+
+
+
+        <div class="address-street">
+          <div>
+            <h5>Tipo de calle</h5>
+            <p-dropdown [options]="typeStreet" [editable]="true"></p-dropdown>
+          </div>
+
+          <div>
+            <h5>Calle</h5>
+            <input type="text" pInputText>
+          </div>
+
+          <div>
+            <h5>Numero</h5>
+            <input type="text" pInputText>
+          </div>
+
+        </div>
+
+        <div>
+          <h5>Telefono de contacto</h5>
+          <input type="text" pInputText>
+        </div>
+
+        <div class="address-reference">
+          <h5>Referencias adicionales</h5>
+          <textarea placeholder="Puntos de referencia para encontrarla" id="float-input" rows="5" cols="30"
+            pInputTextarea></textarea>
+        </div>
+
+        <p-button label="Continuar" [routerLink]="['/payment']" ></p-button>
+
+      </form>
+    </div>
+
+    <div class="container__summary">
+      <h5>Resumen compra</h5>
+      <div>
+        <h5>Productos</h5>
+        <h5>Total</h5>
+      </div>
+      <div>
+        <h5>Envio</h5>
+        <h5>555555</h5>
+      </div>
+      <div>
+        <h5>Pagas</h5>
+        <h5>2234234</h5>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</body>

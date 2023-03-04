@@ -1,0 +1,135 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--gray);
+  height: 6rem;
+}
+
+.header__container .logo {
+  background-image: url("../../../assets/images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-basis: 10%;
+  height: 3rem;
+}
+
+.header__container .search {
+  visibility: collapse;
+  background: var(--white);
+  padding: 5px;
+  flex-basis: 55%;
+}
+.header__container .user {
+  flex-basis: 20%;
+  display: flex;
+}
+
+h5 {
+  font-weight: 500;
+  padding-top: 1rem;
+}
+
+.main__contanier {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid var(--white);
+  background: var(--gray);
+  flex-grow: 1;
+  /* margin: 2rem 0 2rem 0; */
+}
+
+.container__address {
+  flex-basis: 50%;
+  border-radius: 1rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--white);
+
+  /* justify-content: last baseline; */
+}
+
+.address-department-municipalites {
+  display: flex;
+  padding: 0;
+}
+
+.address-department-municipalites div {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.address-department-municipalites div:first-child {
+  margin-right: 10px;
+}
+
+.address-street {
+  display: flex;
+  align-items: center;
+}
+
+.address-street .p-inputtext {
+  width: 100%;
+}
+
+.address-street div {
+  margin-left: 0.5rem;
+}
+
+.address-street div:nth-child(1) {
+  margin-left: 0;
+}
+
+.address-reference {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 8rem;
+}
+
+.address-reference textarea {
+  font-weight: 200;
+  /* background-color: aqua; */
+  flex-grow: 1;
+}
+
+p-button {
+  margin-top: 1rem;
+  align-self: end;
+}
+
+.container__summary {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.container__summary h5 {
+  align-self: flex-start;
+}
+
+.container__summary div{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+footer {
+  margin-top: auto;
+}

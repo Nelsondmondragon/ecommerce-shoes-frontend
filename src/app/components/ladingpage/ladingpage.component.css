@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: var(--gray);
+}
+
+main {
+  background: var(--gray);
+}
+
+main .products {
+  padding: 2rem;
+}
+
+.container {
+  padding: .2rem;
+  border-radius: 5px;
+}
+
+.swiper-wrapper {
+  padding: 0;
+}
+
+.swiper-slide {
+  padding: 0;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 5px;
+  border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%) 1;
+}
+
+footer {
+  margin-top: auto;
+}

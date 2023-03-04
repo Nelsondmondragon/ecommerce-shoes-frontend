@@ -1,0 +1,39 @@
+<body>
+
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main class="container">
+    <div *ngFor="let product of myShoppingCart.values()" class="summary-product">
+      <div class="img-product">
+        <app-cimg [img]="product.images[0]"></app-cimg>
+      </div>
+      <div class="product">
+        <h4>{{product.title}}</h4>
+        <br>
+        <p>{{product.description}}</p>
+        <br>
+        <button class="button">Eliminar</button>
+      </div>
+      <input class="count" [(ngModel)]="product.count" type="number" min="0">
+      <!-- <div>{{count}}</div> -->
+      <div>{{product.price | currency:'COP'}} </div>
+    </div>
+
+    <section class="container__summary">
+
+      <div class="price">
+        <p>Total productos</p>
+        <p>{{totalCart | currency:'COP'}}</p>
+      </div>
+      <button class="button" [routerLink]="['/address']">Continuar Compra</button>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</body>
